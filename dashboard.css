@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.navbar {
+    background-color: #8b4513;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.sidebar {
+    width: 150px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    padding: 10px;
+    transition: width 0.3s;
+}
+.sidebar.collapsed {
+    width: 50px;
+}
+.sidebar a {
+    color: white;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: #575757;
+    padding-left: 10px;
+}
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+.main-content.collapsed {
+    margin-left: 70px;
+}
+.card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.card h3 {
+    margin-top: 0;
+}
+.card.expanded {
+    background-color: #e7f3e7;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+}
+.modal-content h3 {
+    margin-top: 0;
+}
+.calendar {
+    background-color: #fff3cd;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+/* Footer Styles */
+footer {
+    background-color: #8b4513; /* Brown color */
+    color: #fdf8f3;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
+.footer-links a {
+    color: #fdf8f3;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffdda1;
+}
+
+.footer-contact {
+    font-size: 0.9em;
+}

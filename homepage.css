@@ -1,0 +1,139 @@
+       /* General Styles */
+       body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Header Styles */
+    header {
+        background-color: #003366;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    header img {
+        width: 120px;
+    }
+    nav {
+        background-color: #333;
+        text-align: center;
+        padding: 10px;
+    }
+    nav a {
+        color: white;
+        padding: 14px 20px;
+        text-transform: uppercase;
+        margin: 0 15px;
+        display: inline-block;
+    }
+    nav a:hover {
+        background-color: #575757;
+        border-radius: 5px;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-image: url('school-image.jpg');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        text-align: center;
+        padding: 120px 20px;
+    }
+    .hero h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .hero .cta-button {
+        background-color: #FF9900;
+        color: #003366;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 5px;
+        text-transform: uppercase;
+    }
+    .hero .cta-button:hover {
+        background-color: #e68a00;
+    }
+
+    /* Sections Styles */
+    .section {
+        padding: 60px 20px;
+        text-align: center;
+    }
+    .section h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .section p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    /* News & Events Cards */
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .card {
+        background-color: white;
+        width: 250px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        text-align: center;
+    }
+    .card h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    .card p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    /* Testimonials */
+    .testimonials {
+        background-color: #e6f7ff;
+        padding: 60px 20px;
+    }
+    .testimonials h2 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .testimonial-item {
+        font-style: italic;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .testimonial-item span {
+        font-weight: bold;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    footer .social-icons a {
+        color: white;
+        margin: 0 10px;
+        font-size: 24px;
+    }
+    footer .social-icons a:hover {
+        color: #FF9900;
+    }

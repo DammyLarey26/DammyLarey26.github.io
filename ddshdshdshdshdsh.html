@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Student Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .navbar {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 50px;
+            bottom: 0;
+            padding: 10px;
+            transition: width 0.3s;
+        }
+        .sidebar.collapsed {
+            width: 50px;
+        }
+        .sidebar a {
+            color: white;
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+            padding-left: 10px;
+        }
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+        .main-content.collapsed {
+            margin-left: 70px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card.expanded {
+            background-color: #e7f3e7;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 500px;
+        }
+        .modal-content h3 {
+            margin-top: 0;
+        }
+        .calendar {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Student Dashboard</h1>
+        <div>
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <h3>Menu</h3>
+        <a href="#">Dashboard</a>
+        <a href="#">My Courses</a>
+        <a href="#">Assignments</a>
+        <a href="#">Announcements</a>
+        <a href="#">Calendar</a>
+        <a href="#">Support</a>
+    </div>
+
+    <div class="main-content" id="main-content">
+        <button onclick="toggleSidebar()">Toggle Sidebar</button>
+
+        <div class="card" onclick="toggleCard(this)">
+            <h3>My Courses</h3>
+            <p>Click to expand for more details.</p>
+        </div>
+
+        <div class="card" onclick="showModal()">
+            <h3>Assignments</h3>
+            <p>Click to see your assignments.</p>
+        </div>
+
+        <div class="card calendar">
+            <h3>Upcoming Events</h3>
+            <p>Interactive Calendar Coming Soon!</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3>Assignments</h3>
+            <p>Here are your current assignments...</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Your School Name. All Rights Reserved.</p>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('main-content');
+            sidebar.classList.toggle('collapsed');
+            content.classList.toggle('collapsed');
+        }
+
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+
+        function showModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
