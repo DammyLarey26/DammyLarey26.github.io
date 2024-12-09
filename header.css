@@ -6,25 +6,57 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #fdf8f3;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scroll on small screens */
 }
 
 /* Header Styles */
 header {
-    background-color: #8b4513; /* Brown color */
+    background-color: #8b4513;
+    color: #fdf8f3;
     padding: 10px 20px;
-    color: #fdf8f3; /* Cream color */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #fdf8f3;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffdda1;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
     text-align: center;
-    color: white;
     margin-bottom: 20px;
 }
 
@@ -39,73 +71,78 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
 }
 
-/* Event Section */
+.hero-text img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.hero-text h {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Events Section */
 .events {
-    display: flex;
-    justify-content: space-around;
     padding: 20px;
     background: #f7f7f7;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
 }
 
 .event-card {
     background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    border: 3px solid #ddd;
     border-radius: 5px;
-    width: 30%;
+    width: calc(25.333% - 20px); /* Adjusts dynamically */
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .event-card h3 {
     color: #333;
+    margin-bottom: 10px;
 }
 
+.event-card p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* Testimonials Section */
 .testimonials {
     background: #f4f4f4;
-    padding: 40px;
+    padding: 40px 20px;
     text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #444;
 }
 
 .testimonial {
     margin-bottom: 20px;
-}
-
-
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu a {
-    color: #fdf8f3;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #ffdda1;
+    font-style: italic;
+    color: #555;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #8b4513; /* Brown color */
+    background-color: #8b4513;
     color: #fdf8f3;
-    padding: 20px;
+    padding: 1%;
     text-align: center;
-    margin-top: 20px;
-}
-
-.footer-content {
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 .footer-links {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 .footer-links a {
@@ -120,6 +157,67 @@ footer {
     color: #ffdda1;
 }
 
-.footer-contact {
-    font-size: 0.9em;
+.footer-contact a {
+    color: #fdf8f3;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 0;
+}
+
+.footer-contact a:hover {
+    color: #ffdda1;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    .hero-text {
+        font-size: 1.4em;
+        padding: 0 10px;
+    }
+
+    .event-card {
+        width: 45%; /* Two cards per row */
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-text {
+        font-size: 1.2em;
+    }
+
+    .event-card {
+        width: 100%; /* Full width on small screens */
+    }
+
+    h{
+        font-size: 5px;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .footer-contact {
+        font-size: 0.85em;
+    }
 }

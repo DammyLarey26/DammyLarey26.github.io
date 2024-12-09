@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fdf8f3;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents horizontal scroll on small screens */
+}
+
+.container {
+    width: 1000px;
+    margin-bottom: 200px;
+    padding: 20px;
+    padding-left: 200px;
+
+}
+
+.student-profile {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.student-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    object-fit: cover;
+    margin-left: 70px;
+
+}
+.student-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+header {
+    background-color: #8b4513;
+    color: #fdf8f3;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #fdf8f3;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffdda1;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+

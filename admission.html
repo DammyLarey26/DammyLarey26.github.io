@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
-    <link rel="stylesheet" href="admission.css"
+    <link rel="stylesheet" href="admission.css">
 </head>
 <body>
 
@@ -13,17 +13,18 @@
         <div class="logo">TGSC</div>
         <nav>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html" target="_blank">About Us</a></li>
                 <li><a href="login.html" target="_blank">Academics</a></li>
-                <li><a href="admission.html" target="_blank">Admissions</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="admission.html">Admissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
         <h2>Student Registration Form</h2>
-        <form action="admission.php" method="POST">
+        <!-- Updated form includes passport photo and password -->
+        <form action="admission.php" method="POST" enctype="multipart/form-data">
             
             <!-- Full Name -->
             <div class="form-group">
@@ -70,12 +71,24 @@
             <!-- Gender -->
             <div class="form-group">
                 <label>Gender</label>
-                <input type="radio" id="male" name="gender" value="Male" required>
                 <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="Female">
+                <input type="radio" id="male" name="gender" value="Male" required>
                 <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="Other">
+                <input type="radio" id="female" name="gender" value="Female">
                 <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="Other">
+            </div>
+
+            <!-- Passport Photograph -->
+            <div class="form-group">
+                <label for="passport_photo">Passport Photograph</label>
+                <input type="file" id="passport_photo" name="passport_photo" accept="image/*" required>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter a secure password">
             </div>
 
             <!-- Submit Button -->
@@ -86,21 +99,21 @@
         </form>
     </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2024 TGSC. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#privacy">Privacy Policy</a> |
-                    <a href="#terms">Terms of Service</a> |
-                    <a href="#faq">FAQ</a>
-                </div>
-                <div class="footer-contact">
-                    <p>Contact us: +234 911 751 5856 | <a href="mailto:Ovodubela@gmail.com" style="color: white;">Dammy Larey</p></a>
-                    <p>Adepate, Pepsi</p>
-                </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 TGSC. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a> |
+                <a href="#terms">Terms of Service</a> |
+                <a href="#faq">FAQ</a>
             </div>
-        </footer>
+            <div class="footer-contact">
+                <p>Contact us: +234 911 751 5856 | <a href="mailto:Ovodubela@gmail.com" style="color: white;">Dammy Larey</p></a>
+                <p>Adepate, Pepsi</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>

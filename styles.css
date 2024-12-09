@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+/* Navbar Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+  display: flex;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #f1c40f;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    filter: brightness(60%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Event Section */
+.events {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #f7f7f7;
+}
+
+.event-card {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.event-card h3 {
+    color: #333;
+}
+
+.testimonials {
+    background: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+.newsletter {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    margin-right: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background: #555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #888;
+}

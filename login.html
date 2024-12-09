@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Login </title>
+    <title>Student Login</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="login.css">
-    <script src="login.js"></script>
 </head>
 <body>
 
@@ -14,13 +13,18 @@
     <header>
         <div class="logo">TGSC</div>
     </header>
+
+    <!-- Login Form -->
     <div class="login-container">
         <h2>Login</h2>
-        <input type="text" id="username" placeholder="Enter Username">
-        <input type="password" id="password" placeholder="Enter Password">
-        <button onclick="login()">Login</button>
-        <div class="message" id="message"></div>
+        <form action="news.php" method="POST">
+            <input type="text" id="email" name="email" placeholder="Enter Email" required>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
+
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <p>&copy; 2024 TGSC. All rights reserved.</p>
@@ -30,7 +34,9 @@
                 <a href="#faq">FAQ</a>
             </div>
             <div class="footer-contact">
-                <p>Contact us: +234 911 751 5856 | <a href="mailto:Ovodubela@gmail.com" style="color: white;">Dammy Larey</p></a>
+                <p>Contact us: +234 911 751 5856 | 
+                    <a href="mailto:Ovodubela@gmail.com" style="color: white;">Dammy Larey</a>
+                </p>
                 <p>Adepate, Pepsi</p>
             </div>
         </div>

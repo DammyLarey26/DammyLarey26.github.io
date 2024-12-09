@@ -1,6 +1,10 @@
 body{
     text-align: center;
     color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fdf8f3;
+    line-height: 1.6;
+    overflow-x: hidden;  
 }
 
     /* Testimonials */
